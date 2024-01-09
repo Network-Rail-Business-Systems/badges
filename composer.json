@@ -9,5 +9,10 @@
             "email": "anthony.edmonds@networkrail.co.uk"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "NetworkRailBusinessSystems\\GovukLaravel\\": ""
+        }
+    }
 }
