@@ -1,0 +1,13 @@
+{
+    "name": "networkrailbusinesssystems/badges",
+    "description": "Generate readme badges during your pre-push",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Anthony Edmonds",
+            "email": "anthony.edmonds@networkrail.co.uk"
+        }
+    ],
+    "require": {}
+}
