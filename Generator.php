@@ -246,7 +246,7 @@ class Generator
             </g>
         </svg>';
 
-        file_put_contents($this->getPath('github/$filename.svg'), $svg);
+        file_put_contents($this->getPath(".github/$filename.svg"), $svg);
     }
     
     protected function getPath(string $path): string
