@@ -11,16 +11,14 @@ composer require --dev networkrailbusinesssystems/badges
 
 2. Ensure that PHPUnit outputs logs and coverage with the following settings:
 ```xml
-<phpunit>
-    <coverage>
-        <report>
-            <text outputFile=".phpunit.cache/coverage.txt" showUncoveredFiles="false" showOnlySummary="true" />
-        </report>
-    </coverage>
-    <logging>
-        <junit outputFile=".phpunit.cache/tests.xml" />
-    </logging>
-</phpunit>
+<coverage>
+    <report>
+        <text outputFile=".phpunit.cache/coverage.txt" showUncoveredFiles="false" showOnlySummary="true" />
+    </report>
+</coverage>
+<logging>
+    <junit outputFile=".phpunit.cache/tests.xml" />
+</logging>
 ```
 
 3. Add the following commands to the pre-push hook:
