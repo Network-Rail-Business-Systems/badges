@@ -13,6 +13,7 @@ composer require --dev networkrailbusinesssystems/badges
 ```xml
 <coverage>
     <report>
+        <html outputDirectory=".phpunit.cache/html" />
         <text outputFile=".phpunit.cache/coverage.txt" showUncoveredFiles="false" showOnlySummary="true" />
     </report>
 </coverage>
