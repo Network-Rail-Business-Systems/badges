@@ -5,6 +5,10 @@ Generate badges as part of your pre-push hooks!
 ## Installation
 
 1. Add `networkrailbusinesssystems/badges` to your Composer dev dependencies
+```bash
+composer require --dev networkrailbusinesssystems/badges
+```
+
 2. Ensure that PHPUnit outputs logs and coverage with the following settings:
 ```xml
 <phpunit>
