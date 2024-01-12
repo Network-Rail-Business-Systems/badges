@@ -49,7 +49,7 @@ You must have xdebug installed to run coverage checks, and enable the coverage m
 
 ```ini
 [xdebug]
-`xdebug.mode=coverage`
+xdebug.mode=coverage
 ```
 
 ## Usage
