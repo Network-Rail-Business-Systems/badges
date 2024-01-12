@@ -40,6 +40,18 @@ git diff-index --quiet --cached HEAD || git commit -m "Updated badges" --no-veri
 ![Tests status](.github/tests.svg)
 ```
 
+## XDebug
+
+You must have xdebug installed to run coverage checks, and enable the coverage mode.
+
+1. `sudo apt install php-xdebug`
+2. Add the following to the end of your `php.ini`:
+
+```ini
+[xdebug]
+`xdebug.mode=coverage`
+```
+
 ## Usage
 
 1. Run `git push` as normal
