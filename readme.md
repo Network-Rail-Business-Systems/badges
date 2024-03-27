@@ -40,9 +40,11 @@ git diff-index --quiet --cached HEAD || git commit -m "Updated badges" --no-veri
 ![Tests status](.github/tests.svg)
 ```
 
-## XDebug
+## Debug driver
 
-You must have xdebug installed to run coverage checks, and enable the coverage mode.
+You must have either xdebug or PCOV installed to run coverage checks, and enable the coverage mode.
+
+## XDebug
 
 1. `sudo apt install php-xdebug`
 2. Add the following to the end of your `php.ini`:
@@ -50,6 +52,18 @@ You must have xdebug installed to run coverage checks, and enable the coverage m
 ```ini
 [xdebug]
 xdebug.mode=coverage
+```
+
+## PCOV
+
+1. `sudo apt install php8.2-dev`
+2. `sudo apt install php-pear`
+3. `sudo pecl install pcov`
+4. Add the following to the end of your `php.ini`:
+
+```ini
+[pcov]
+extension=pcov.so
 ```
 
 ## Usage
