@@ -44,7 +44,9 @@ git diff-index --quiet --cached HEAD || git commit -m "Updated badges" --no-veri
 
 You must have either xdebug or PCOV installed to run coverage checks, and enable the coverage mode.
 
-## XDebug
+PCOV is generally newer and faster than XDebug, however it may not be as accurate.
+
+### XDebug
 
 1. `sudo apt install php-xdebug`
 2. Add the following to the end of your `php.ini`:
@@ -54,7 +56,7 @@ You must have either xdebug or PCOV installed to run coverage checks, and enable
 xdebug.mode=coverage
 ```
 
-## PCOV
+### PCOV
 
 1. `sudo apt install php8.2-dev`
 2. `sudo apt install php-pear`
