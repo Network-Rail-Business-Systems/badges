@@ -15,6 +15,7 @@ class Generator
         $this->makeNpmBadge();
         $this->makePhpBadge();
         $this->makeTestsBadge();
+        $this->makeViewsBadge();
     }
 
     public function makeComposerBadge(): void
@@ -201,6 +202,25 @@ class Generator
         }
 
         $this->makeBadge('Tests', $label, $status, 'tests');
+    }
+
+    public function makeViewsBadge(): void
+    {
+        $path = $this->getPath('.phpunit.cache/view-render-results.json');
+
+        if (file_exists($path) === false) {
+            return;
+        }
+
+        $raw = file_get_contents($path);
+        $json = json_decode($raw);
+
+        $this->makeBadge(
+            'Views',
+            "$json->percent%",
+            $json->result === 'Pass' ? 1 : -1,
+            'views',
+        );
     }
     
     protected function makeBadge(
