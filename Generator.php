@@ -15,6 +15,7 @@ class Generator
         $this->makeNpmBadge();
         $this->makePhpBadge();
         $this->makeTestsBadge();
+        $this->makeViewsBadge();
     }
 
     public function makeComposerBadge(): void
