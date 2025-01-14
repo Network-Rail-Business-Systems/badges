@@ -38,6 +38,7 @@ git diff-index --quiet --cached HEAD || git commit -m "Updated badges" --no-veri
 ![NPM status](.github/npm.svg)
 ![PHP version](.github/php.svg)
 ![Tests status](.github/tests.svg)
+![Views status](.github/views.svg)
 ```
 
 ## Debug driver
@@ -73,3 +74,7 @@ extension=pcov.so
 1. Run `git push` as normal
 2. The pre-push hooks will fire, running your tests and coverage
 3. The badges will automatically generate, update, and be added to the commit
+
+## Views status
+
+Use the `AssertsViewsRender` trait and extension in the [LaravelTestingTraits](https://github.com/AnthonyEdmonds/laravel-testing-traits/) library to enable tracking the status of rendered views.
