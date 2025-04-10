@@ -118,8 +118,8 @@ class Generator
             $laravel = trim($laravel, '^');
 
             $status = match ($laravel) {
-                '11' => 1,
-                '10' => 0,
+                '12' => 1,
+                '11' => 0,
                 default => -1,
             };
         }
@@ -165,8 +165,8 @@ class Generator
             $php = trim($php, '^');
 
             $status = match ($php) {
-                '8.3' => 1,
-                '8.2' => 0,
+                '8.4' => 1,
+                '8.3' => 0,
                 default => -1,
             };
         }
