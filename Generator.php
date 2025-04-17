@@ -206,7 +206,7 @@ class Generator
 
     public function makeViewsBadge(): void
     {
-        $path = $this->getPath('.phpunit.cache/view-render-results.json');
+        $path = $this->getPath('.phpunit.cache/views-results.json');
 
         if (file_exists($path) === false) {
             return;
