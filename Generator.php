@@ -110,10 +110,14 @@ class Generator
             $status = -1;
 
         } else {
-            $laravel = json_decode(
+            $composer = json_decode(
                 file_get_contents($path),
                 true,
-            )['require']['laravel/framework'] ?? 'Unknown';
+            );
+
+            $laravel = $composer['require']['laravel/framework']
+                ?? $composer['require']['illuminate/support']
+                ?? 'Unknown';
 
             $laravel = trim($laravel, '^');
 
