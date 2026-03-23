@@ -122,8 +122,8 @@ class Generator
             $laravel = trim($laravel, '^');
 
             $status = match ($laravel) {
-                '12' => 1,
-                '11' => 0,
+                '13' => 1,
+                '12' => 0,
                 default => -1,
             };
         }
