@@ -119,11 +119,9 @@ class Generator
                 ?? $composer['require']['illuminate/support']
                 ?? 'Unknown';
 
-            $laravel = trim($laravel, '^');
-
-            $status = match ($laravel) {
-                '13' => 1,
-                '12' => 0,
+            $status = match (true) {
+                str_starts_with($laravel, '^13') => 1,
+                str_starts_with($laravel, '^12') => 0,
                 default => -1,
             };
         }
